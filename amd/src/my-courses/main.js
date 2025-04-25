@@ -22,12 +22,7 @@ import {createPagination} from "../pagination";
 let courses = [];
 
 const handleFilter = () => {
-  // Remove
-  courses.forEach((course, index) => {
-    console.log(`Course #${index + 1}`, course);
-  });
-  
-  let filteredCourses = courses.filter(course => course.ismaterial === false);
+  let filteredCourses = courses.filter(course => course.ismaterial === true);
   const filterStates = getFilterState();
 
   if (filterStates[FILTER_TYPES.QUERY] !== null) {

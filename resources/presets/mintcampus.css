@@ -15,7 +15,7 @@
     display: none !important;
 }
 .block_mat_explorer .dropdown-menu .dropdown-item:hover {
-    color: white !important;
+    color: #000 !important;
 }
 
 #matMainWrapper {
@@ -107,7 +107,7 @@
     font-size: 16px;
 }
 .mat-card__content .mat-card__title {
-    color: white;
+    color: #000;
     font-size: 26px;
     line-height: 34px;
     font-weight: 600;
@@ -124,7 +124,7 @@
     font-size: 1.3rem;
 }
 .mat-card__content .mat-card__description {
-    color: white;
+    color: #000;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -182,11 +182,11 @@
 
 .mat-card__action-button.secondary > i {
     background: transparent;
-    color: white;
-    border: 1px solid white;
+    color: #000;
+    border: 1px solid #000;
 }
 .mat-card__action-button.secondary:hover > i {
-    background: white;
+    background: #000;
     color: black;
 }
 
@@ -242,3 +242,13 @@
     flex: 1;
     padding: 0 2rem;
 }
+
+.mat-card__content .mat-card__quick-facts,.mat-card__label favourite, 
+.mat-card__tags, .mat-card__sender-name {
+  color: black;
+}
+
+.mat-card__label.favourite img {
+  display: none;
+}
+
