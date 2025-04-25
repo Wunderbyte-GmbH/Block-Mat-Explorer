@@ -1,0 +1,37 @@
+<div id="id-{{instanceId}}">
+<div class="mat-main-wrapper" id="matMainWrapper">
+  <div class="mat-main-content" id="matMainContent">
+    <div class="w-100">
+      <div class="w-100">
+        <div class="mat-search-container">
+          <div class="mat-search">
+            <input
+              type="text"
+              class="form-control"
+              id="matSearchInput"
+              placeholder="{{#str}}searchbarplaceholder, block_mat_explorer{{/str}}"
+              aria-label="{{#str}}searchbarplaceholder, block_mat_explorer{{/str}}"
+            />
+            <button class="btn btn-link" id="matClearSearch" aria-label="{{#str}}searchclearbtn, block_mat_explorer{{/str}}">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="matDropDownContainer"
+        class="mat-filter-dropdown-container"
+      ></div>
+      <div class="w-100 mat-pagination-container">
+        <div class="mat-total-count" id="matCourseCount"></div>
+        <div class="mat-top-pagination" id="matTopPaginationContainer"></div>
+        <div class="mat-sort-container" id="matSortContainer"></div>
+      </div>
+      <div id="matMainContainer" class="mat_res_container"></div>
+      <div class="w-100 mat-pagination-container bottom">
+        <div class="mat-bottom-pagination" id="matBottomPaginationContainer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
