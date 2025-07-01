@@ -75,7 +75,9 @@ const courseCardFrontTemplate = (
         courseType,
         duration,
         topics,
-        favourite
+        favourite,
+        ma_art1,
+        ma_art2,
     }
 ) => {
     title = truncateString(title, 100);
@@ -102,7 +104,7 @@ const courseCardFrontTemplate = (
                 <p class="card-text mb-1 sender">${senderName}</p>
             </div>
             <div class="mr-3 d-flex align-items-center duration">
-                <div>${duration}</div>
+                <div>${ma_art1}</div>
             </div>
           </div>
     `;
