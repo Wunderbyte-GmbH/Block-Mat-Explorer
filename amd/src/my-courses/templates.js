@@ -88,12 +88,8 @@ const courseCardFrontTemplate = (
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
     const svgMatIcon = `
     <div class="icon-container has-icon-color has-custom-mc-lila-color" style="color:#551c77;width:20px;transform:rotate(0deg) scaleX(1) scaleY(1)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 128 140" fill="currentColor">
-        <path d="M64,26.55c-27.62,0-50,22.38-50,50s22.38,50,50,50,50-22.38,50-50-22.38-50-50-50Zm18.65,63.1l-4.03,5.04
-            c-.26.33-.59.61-.96.81-.37.2-.78.33-1.2.38-.42.05-.85.01-1.25-.11-.41-.12-.79-.31-1.12-.58l-13.51-10.02
-            c-.94-.76-1.71-1.71-2.23-2.8-.52-1.09-.79-2.28-.79-3.49v-31.36c0-.86.34-1.68.94-2.28.6-.6,1.43-.94,2.28-.94h6.45
-            c.86,0,1.68.34,2.28.94.6.6.94,1.43.94,2.28v29.03l11.69,8.57c.33.26.61.59.81.96s.33.78.38,1.2c.05.42,0,.85-.11,1.25
-            -.12.41-.32.79-.58,1.12Z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+        <path d="M12,111l112,64a8,8,0,0,0,7.94,0l112-64a8,8,0,0,0,0-13.9l-112-64a8,8,0,0,0-7.94,0l-112,64A8,8,0,0,0,12,111ZM128,49.21L223.87,104 128,158.79 32.13,104ZM246.94,140A8,8,0,0,1,244,151L132,215a8,8,0,0,1-7.94,0L12,151A8,8,0,0,1,20,137.05l108,61.74 108-61.74A8,8,0,0,1,246.94,140Z"></path>
         </svg>
     </div>
     `;
@@ -115,7 +111,7 @@ const courseCardFrontTemplate = (
                 <p class="card-text mb-1 sender">${senderName}</p>
             </div>
             <div class="mr-3 d-flex align-items-center duration">
-                                ${svgMatIcon}
+                ${svgMatIcon}
                 <div>${ma_art1}${ma_art2 ? ', ' + ma_art2 : ''}</div>
             </div>
           </div>
