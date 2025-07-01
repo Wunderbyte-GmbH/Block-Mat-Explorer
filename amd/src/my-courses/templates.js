@@ -4,11 +4,7 @@ import $ from "jquery";
 export const courseCardTemplate = (values) => {
   const elementDefinition = `
   <div class="card mat-card ${values.userEnrolled ? 'to-course' : 'enrol-into-course'}" data-id="${values.id}" tabindex="0">
-    <div class="card-content">
-    <div class="card-front">
       ${courseCardFrontTemplate(values)}
-    </div>
-    </div>
   </div>`;
   const element = $(elementDefinition);
 
@@ -90,48 +86,26 @@ const courseCardFrontTemplate = (
     const heartIconName = favourite ? "heart-filled.png" : "heart-outline.png";
 
     return `
-    <div class="mat-card__image">
-       ${image ?
-          "<img src=\"" + image + "\" alt=\"\">" : "<img src=\"https://picsum.photos/2124\" alt=\"\">"}
-    </div>
-    <div class="mat-card__background"></div>
-    
-    ${MCOriginal ? "<div class=\"mat-card__label mc-original\">MINT-Campus-Original</div>" : ""}
-    <div class="mat-card__label favourite">
-        <img src="/blocks/course_explorer/resources/images/${heartIconName}" alt="${heartIconName}">
-    </div>
-   
-    
-    <div class="mat-card__content">
-        <small class="mat-card__sender-name">${senderName ?? ''}</small>
-        <h3 class="mat-card__title">
-            ${title}        
-        </h3>
-        <div class="mat-card__quick-facts d-sm-flex justify-content-between flex-wrap">
-            <div class="d-flex align-items-center">
-                <i class="fa fa-graduation-cap mr-1"></i>
-                <span>${courseType ?? ''}</span>
-            </div>
-            <div class="d-flex align-items-center">
-                <i class="fa fa-clock-o mr-1"></i>
-                <span>${duration ?? ''}</span>
-            </div>
-            <div class="d-flex align-items-center">
+          <div class="position-relative card-header p-0">
+            ${image ? `<img src="${image}" class="card-img-top" alt="">` : `<img src="https://picsum.photos/2124" class="card-img-top" alt="">`}
+            ${MCOriginal ? "<div class=\"course-card__label mc-original\">MC-Original</div>" : ""}
+            <div class="d-flex flex-wrap text-muted mb-2 small rating">
+              <div class="d-flex align-items-center">
                 ${getRating(score, reviewsnum)}
+              </div>
             </div>
         </div>
-        <p class="mat-card__description">
-            ${courseCardDescription}
-        </p>
-        ${topics?.length > 0 ?
-        `<div class="mat-card__tags d-flex">
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-tag"></i>
-                </div>
-                <div>${topics.join(', ')}</div>
-            </div>` :
-        ""}
-    </div>`;
+          <div class="card-body">
+            <div>
+                <span class="course-type">${courseType}</span>
+                <h2 class="course-title">${title}</h5>
+                <p class="card-text mb-1 sender">${senderName}</p>
+            </div>
+            <div class="mr-3 d-flex align-items-center duration">
+                <div>${duration}</div>
+            </div>
+          </div>
+    `;
 };
 
 const getRating = (score, reviewsnum) => {
