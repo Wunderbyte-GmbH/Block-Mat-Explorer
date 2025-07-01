@@ -571,7 +571,7 @@
     }
 }
 
-#cebMainContainer .mat-card .card-header {
+#matMainContainer .mat-card .card-header {
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -585,7 +585,7 @@
     min-height: unset;
 }
 
-#cebMainContainer .mat-card .card-img-top, .theme-card .card-img-top {
+#matMainContainer .mat-card .card-img-top, .theme-card .card-img-top {
     background-position: center;
     background-size: contain;
     border: none;
@@ -605,6 +605,62 @@
     width: 100%;
 }
 
-#cebMainContainer .mat-card {
+#matMainContainer .mat-card {
     background: rgb(240, 233, 229);
+}
+
+
+#matMainContainer .card.course-card .card-header {
+    border: none !important;
+}
+
+#matMainContainer h2.course-title {
+    font-weight: 700;
+    margin-top: 1.25rem;margin-bottom: 1.25rem;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
+    color: rgb(85, 28, 119);
+}
+
+#matMainContainer .card h2.course-title {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+#matMainContainer .card-body {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.4rem;
+    padding-right: 0.6rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.6rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#matMainContainer .card-header {
+    border: none !important;
+}
+
+#matMainContainer .course-type {
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: #f5698f;
+}
+#matMainContainer .course-type {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+#matMainContainer .duration {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
+}
+#matMainContainer p.sender {
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.227), 1.125rem);
 }
